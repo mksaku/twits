@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+  <div class="index">
+   <div class="col-md-3 col-sm-5 ">
+    <h2>ツイートする</h2>
+    <%= render 'form' %>
+  </div>
+  
+  
+  <div class="container">
+  <div class="wrapper col-md-9  col-sm-7">
+    
+    
+    <h1>ツイート一覧</h1>
+    <div class="all">
+    <% @twits.each do |tweet| %>
+    <div class="row">
+
+      <p><%= tweet.content %></p>
+      <div class="pull-right">
+      <%= link_to "編集", edit_twit_path(tweet.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "削除", twit_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+      </div>
+ 
+    </div>
+    <% end %>
+  </div>
+  </div>
+  </div>
+</div>
