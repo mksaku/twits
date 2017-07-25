@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'top/index'
-
+  devise_for :users
  # get 'twits/index'
 
   get 'twits' => 'twits#index'
@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     collection do
       post :confirm
     end
-  
   end
+  
    
    
   # The priority is based upon order of creation: first created -> highest priority.
