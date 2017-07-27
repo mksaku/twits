@@ -6,7 +6,8 @@ class TwitsController < ApplicationController
     
      if params[:back]
        @twits = Twit.all
-      @twit = Twit.new(twits_params)
+       @twit = Twit.new(twits_params)
+       
     else
       @twits = Twit.all
       @twit = Twit.new

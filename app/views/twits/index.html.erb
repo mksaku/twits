@@ -16,8 +16,9 @@
     <h1>ツイート一覧</h1>
     <div class="all">
     <% @twits.each do |tweet| %>
+    
     <div class="row">
-
+      <p><%= tweet.user.name %></p>
       <p><%= tweet.content %></p>
       <div class="pull-right">
       <%= link_to "編集", edit_twit_path(tweet.id), class: 'btn btn-default btn-sm btn-success' %>
