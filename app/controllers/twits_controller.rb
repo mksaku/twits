@@ -21,6 +21,7 @@ class TwitsController < ApplicationController
   def create
     @twits = Twit.all
     @twit=Twit.new(twits_params)
+    @twit.user_id = current_user.id
     if @twit.save
       
       redirect_to twits_path, notice: "ツイートしました！"
