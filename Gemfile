@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+#
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -51,3 +51,4 @@ gem 'faker'
 group :development do
   gem 'letter_opener_web'
 end
+gem 'rails_admin'
